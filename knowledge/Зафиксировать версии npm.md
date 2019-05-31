@@ -1,3 +1,4 @@
+```js
 var fs = require('fs');
 var p = JSON.parse( fs.readFileSync( 'package.json') );
 var v = JSON.parse( fs.readFileSync( 'npm-shrinkwrap.json') );
@@ -12,3 +13,8 @@ function updateDependencies( list, v )
         for ( var d in list )
                 list[d] = v[d].version;
 }
+
+```
+
+Предварительно выполнив `npm shrinkwrap`
+
